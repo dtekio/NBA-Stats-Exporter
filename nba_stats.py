@@ -20,8 +20,7 @@ sorts = ["TEAM_ABBREVIATION", "AGE", "W", "L", "MIN", "PTS", "FGM", "FGA", "FG_P
 
 
 def scrape_nbastats():
-    driver = webdriver.Chrome(service=Service(
-        "finished-projects/81-100. [PRO]/92. [Web Scraping] Custom Web Scraper/chromedriver"))
+    driver = webdriver.Chrome(service=Service("chromedriver"))
 
     filename = f'stats&s{season.get()}&type{season_type.get()}&permode{permode.get()}&sort{sort.get()}.csv'
     driver.get(
